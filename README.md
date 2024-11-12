@@ -1,6 +1,6 @@
 # Modelisation-systemes-de-vision
 
-Dans ce repositoire nous allons partager tout les travaux relatifs au module M2 VMI **Modelisation des systemes de vision** presenté par monsieur Camille KURTZ.
+Dans ce repositoire nous allons partager tout les travaux relatifs au module M2 VMI **Modelisation des systemes de vision** presenté par monsieur <ins>Camille KURTZ</ins>.
 
 ## Presentation de l'article "Towards a general-purpose foundation model for computational pathology" 
 
