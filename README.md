@@ -8,5 +8,5 @@ Une presentation PowerPoint de [l'article](https://www.nature.com/articles/s4159
 
 
 ## Etat de l'Art
-L'etat de l'art sur le thème "Apprentissage des biomarqueurs en oncologie en utilisant les techniques d'IA modernes" Consultable à [l'adresse suivante: ](https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Pr%C3%A9sentation%20Article.pdf)
+L'etat de l'art sur le thème "Apprentissage des biomarqueurs en oncologie en utilisant les techniques d'IA modernes" Consultable à [l'adresse suivante: ]([https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Pr%C3%A9sentation%20Article.pdf](https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Etat_de_lart_BENNABI_ZHAO.pdf))
 ## Projet final
