@@ -98,5 +98,5 @@ L'entrainement est relativement rapide puisque le modèle converge en moyenne à
 - Quelques problèmes non corrigés du code(39 issues au [repository](https://github.com/Xiyue-Wang/TransPath/issues)).
 - Difficulté d’utilisation du modèle sur de la segmentation et ROI
   
- Une nouvelle version CTransPath v2 est attendue prochainement avec des ameliorations d’au moins 5% par rapport à la version actuelle.
+ Une nouvelle version CTransPath v2 est attendue prochainement avec des ameliorations d’au moins 5% par rapport à la version actuelle (Màj Avril 2024).
  
