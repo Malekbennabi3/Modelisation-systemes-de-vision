@@ -45,7 +45,7 @@ https://www.cancerimagingarchive.net/collection/tcga-brca/
 
 # 3- Architecture:
 Le nombre des Paramètres du modèle est de 27.5M et il prend des images RGB de taille 224 x 224 x 3
-(https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-18%20222113.png)[Approche SRCL]
+![Approche SRCL](https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-18%20222113.png)
 L'architecture principale utilisé est composé d'un CNN pour capturer les caracteristiques locales (Bordures et textures) et d'un Transformer pour le mecanisme d'attention global.
 Le CNN utilisé est similaire aux reseaux Resnet avec 3 couches convolutives et le transformer utilisé est de type [Swin](https://arxiv.org/abs/2103.14030) avec 4 couches d'auto-attention dotées de fenêtres décalées (Shifted Windows).
 
@@ -83,4 +83,16 @@ Concernant le split utilisé on a fait 70% pour l'entrainement et 15% pour l'ent
 Le resultat de la classification sur un entrainement désequilibé (5200 classe1/ 20000 classe2) montre que le modèle est assez robuste (uniquement 4% d'ecart entre l'entrainement et la validation)
 ![resultat](https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-20%20091146.png)
 
+# 7- Conclusion:
+- Approche Hybride est moins sensible au contexte global (contrairement aux approches basées completement sur les transformers)
+- Entraînement relativement rapide même sur un grand volume de données
+- Bonne capacité de généralisation mêmes sur des données dispersées
+
+# 8- Critiques et perspectives:
+- Problèmes de compatibilité (Inférence, timm 0.5.4).
+- Difficulté d'accès au dataset utilisé dans l'article.
+- Quelques problèmes non corrigés du code(39 issues au [repository](https://github.com/Xiyue-Wang/TransPath/issues)).
+- Difficulté d’utilisation du modèle sur de la segmentation et ROI
+  
+ Une nouvelle version CTransPath v2 est attendue prochainement avec des ameliorations d’au moins 5% par rapport à la version actuelle.
  
