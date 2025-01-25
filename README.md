@@ -49,14 +49,14 @@ Le nombre des Paramètres du modèle est de 27.5M et il prend des images RGB de 
 L'architecture principale utilisé est composé d'un CNN pour capturer les caracteristiques locales (Bordures et textures) et d'un Transformer pour le mecanisme d'attention global.
 Le CNN utilisé est similaire aux reseaux Resnet avec 3 couches convolutives et le transformer utilisé est de type [Swin](https://arxiv.org/abs/2103.14030) avec 4 couches d'auto-attention dotées de fenêtres décalées (Shifted Windows).
 
-(https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-18%20224538.png)[Architecture CTransPath]
+![Architecture CTransPath](https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-18%20224538.png)
 
 # 4- Protocole experimental:
 Dans ce projet nous avons voulu essayer deux approches differentes:
 
 - La premiere approche consiste en l'utilisation des photos WSI directement en format .svs et de laisser le modèle lui meme extraire les caracteristiques discriminantes sous forme de patchs ordonnés
 - Dans la seconde approche nous avons prealablement decoupé chaque WSI en 250 images .png de taille (512x512) et nous avons aussi melangé l'ordre des imagettes obtenues.
-(Un aperçu des patchs)[https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-19%20212201.png]
+![Un aperçu des patchs](https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-19%20212201.png)
 
 # 5- Evaluation:
 
@@ -81,6 +81,6 @@ Concernant le split utilisé on a fait 70% pour l'entrainement et 15% pour l'ent
  Accuracy: 82%
 
 Le resultat de la classification sur un entrainement désequilibé (5200 classe1/ 20000 classe2) montre que le modèle est assez robuste (uniquement 4% d'ecart entre l'entrainement et la validation)
-(https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-20%20091146.png)[]
+![resultat](https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-20%20091146.png)
 
  
