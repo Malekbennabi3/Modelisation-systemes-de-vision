@@ -31,15 +31,15 @@ La presentation PowerPoint du deuxieme thème du projet final intitulé "Transfo
 
 # 2- Datasets:
 - Dataset original:
- PAIP (Pathology Artificial Intelligence Platform) WSI:  http://wisepaip.org/paip
- TCGA (National Cancer Institute):https://portal.gdc.cancer.gov/
+  - PAIP (Pathology Artificial Intelligence Platform) WSI:  http://wisepaip.org/paip
+  - TCGA (National Cancer Institute):https://portal.gdc.cancer.gov/
  ~15,000,000 images au total puis choix de 100 images de chaque WSI.
  après le pre-traitement un total de2,700,521 images histopathologiques non labélisées sont rassemblées.
 
 - Dataset utilisé:
-  TCGA-COAD | The Cancer Genome Atlas: Cancer colorectal (Colon Adenocarcinoma)
+  - TCGA-COAD | The Cancer Genome Atlas: Cancer colorectal (Colon Adenocarcinoma)
  https://www.cancerimagingarchive.net/collection/tcga-coad/
- TCGA-BRCA | The Cancer Genome Atlas:Cancer du sein (Breast Invasive Carcinoma)
+  - TCGA-BRCA | The Cancer Genome Atlas:Cancer du sein (Breast Invasive Carcinoma)
 https://www.cancerimagingarchive.net/collection/tcga-brca/
  ~52 000 images & 192 WSI (sous format png/svs)
 
@@ -82,6 +82,9 @@ Concernant le split utilisé on a fait 70% pour l'entrainement et 15% pour l'ent
 
 Le resultat de la classification sur un entrainement désequilibé (5200 classe1/ 20000 classe2) montre que le modèle est assez robuste (uniquement 4% d'ecart entre l'entrainement et la validation)
 ![resultat](https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-20%20091146.png)
+
+L'entrainement est relativement rapide puisque le modèle converge en moyenne à la 5 eme epoch.
+![Loss](https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-19%20225314.png)
 
 # 7- Conclusion:
 - Approche Hybride est moins sensible au contexte global (contrairement aux approches basées completement sur les transformers)
