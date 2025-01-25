@@ -46,6 +46,7 @@ https://www.cancerimagingarchive.net/collection/tcga-brca/
 # 3- Architecture:
 Le nombre des Paramètres du modèle est de 27.5M et il prend des images RGB de taille 224 x 224 x 3
 ![Approche SRCL](https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-18%20222113.png)
+
 L'architecture principale utilisé est composé d'un CNN pour capturer les caracteristiques locales (Bordures et textures) et d'un Transformer pour le mecanisme d'attention global.
 Le CNN utilisé est similaire aux reseaux Resnet avec 3 couches convolutives et le transformer utilisé est de type [Swin](https://arxiv.org/abs/2103.14030) avec 4 couches d'auto-attention dotées de fenêtres décalées (Shifted Windows).
 
