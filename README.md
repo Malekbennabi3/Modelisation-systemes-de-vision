@@ -66,8 +66,8 @@ Concernant le split utilisé on a fait 70% pour l'entrainement et 15% pour l'ent
    - Accuracy
    - Cross Entropy Loss
 - Pour l'extraction des feature:
- - Accuracy
- - Cosine Similarity [-1, 1]
+   - Accuracy
+   - Cosine Similarity [-1, 1]
 
 # 6- Resultats obtenus:
 - TCGA-COAD:- Classification Image:
@@ -79,5 +79,8 @@ Concernant le split utilisé on a fait 70% pour l'entrainement et 15% pour l'ent
  Accuracy: 93%
  Loss: 0.04- Feature extraction:
  Accuracy: 82%
+
+Le resultat de la classification sur un entrainement désequilibé (5200 classe1/ 20000 classe2) montre que le modèle est assez robuste (uniquement 4% d'ecart entre l'entrainement et la validation)
+(https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-20%20091146.png)[]
 
  
