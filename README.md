@@ -16,11 +16,12 @@ La presentation PowerPoint du deuxieme thème du projet final intitulé "Transfo
 ## Rapport
 
 # 1- Introduction:
--Contexte:
+- Contexte:
  Problème des annotations dans les images médicales: Les images histopathologiques
  nécessitent des annotations précises, mais les processus d'annotation sont coûteux et complexes.
  représentations utiles. 
- -Solution:
+ 
+ - Solution:
  Apprentissage auto-supervisé (SSL): Il exploite des données non annotées pour générer des
  Apprentissage contrastif sémantiquement pertinent (SRCL):  SRCL améliore les approches
  traditionnelles d'apprentissage contrastif en sélectionnant des paires positives avec des
@@ -41,7 +42,42 @@ La presentation PowerPoint du deuxieme thème du projet final intitulé "Transfo
  TCGA-BRCA | The Cancer Genome Atlas:Cancer du sein (Breast Invasive Carcinoma)
 https://www.cancerimagingarchive.net/collection/tcga-brca/
  ~52 000 images & 192 WSI (sous format png/svs)
-# 3-
 
+# 3- Architecture:
+Le nombre des Paramètres du modèle est de 27.5M et il prend des images RGB de taille 224 x 224 x 3
+(https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-18%20222113.png)[Approche SRCL]
+L'architecture principale utilisé est composé d'un CNN pour capturer les caracteristiques locales (Bordures et textures) et d'un Transformer pour le mecanisme d'attention global.
+Le CNN utilisé est similaire aux reseaux Resnet avec 3 couches convolutives et le transformer utilisé est de type [Swin](https://arxiv.org/abs/2103.14030) avec 4 couches d'auto-attention dotées de fenêtres décalées (Shifted Windows).
+
+(https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-18%20224538.png)[Architecture CTransPath]
+
+# 4- Protocole experimental:
+Dans ce projet nous avons voulu essayer deux approches differentes:
+
+- La premiere approche consiste en l'utilisation des photos WSI directement en format .svs et de laisser le modèle lui meme extraire les caracteristiques discriminantes sous forme de patchs ordonnés
+- Dans la seconde approche nous avons prealablement decoupé chaque WSI en 250 images .png de taille (512x512) et nous avons aussi melangé l'ordre des imagettes obtenues.
+(Un aperçu des patchs)[https://github.com/Malekbennabi3/Modelisation-systemes-de-vision/blob/main/Capture%20d'%C3%A9cran%202025-01-19%20212201.png]
+
+# 5- Evaluation:
+
+Pour la réalisation de ce projet nous avons realisé un finetuning sur la dernière couche du modèle pré-entrainé pour faire de la classification, le modèle pré-entrainé est disponible à [l'adresse suivante:](https://huggingface.co/jamesdolezal/CTransPath/blob/main/ctranspath.pth)
+Concernant le split utilisé on a fait 70% pour l'entrainement et 15% pour l'entrainement et 15% pour la validation, les métriques utilisées sont:
+- Pour la classification:
+   - Accuracy
+   - Cross Entropy Loss
+- Pour l'extraction des feature:
+ - Accuracy
+ - Cosine Similarity [-1, 1]
+
+# 6- Resultats obtenus:
+- TCGA-COAD:- Classification Image:
+ Accuracy:  78.3%
+ Loss: 0.18-Feature extraction:
+ Accuracy: 76%
+
+- TCGA-BRCA:- Classification Image:
+ Accuracy: 93%
+ Loss: 0.04- Feature extraction:
+ Accuracy: 82%
 
  
